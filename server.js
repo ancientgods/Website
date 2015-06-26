@@ -64,7 +64,7 @@ setInterval(function() {
 }, 1000) //Resets Date each second. Sets timestamp to new time. Used for synchronisation.
 
 // App-gets :P
-app.get('/', function (req , res) {
+app.get('/Terraria/', function (req , res) {
     utils.ensureCookieExists(req, res);
     var user = tsdb.users[req.cookies.uid];
     
@@ -78,7 +78,7 @@ app.get('/', function (req , res) {
 
 
 
-app.get('/store', function (req, res) {
+app.get('/Terraria/store', function (req, res) {
     var user = tsdb.users[req.cookies.uid];
     
     if (!user) {
@@ -93,7 +93,7 @@ app.get('/store', function (req, res) {
     }
 });
 
-app.get('/map', function (req, res) {
+app.get('/Terraria/map', function (req, res) {
     utils.ensureCookieExists(req, res);
     var user = tsdb.users[req.cookies.uid];
     
@@ -105,17 +105,17 @@ app.get('/map', function (req, res) {
     res.render('map', info);
 });
 
-app.get('/map/fullscreen', function (req, res) {
+app.get('/Terraria/map/fullscreen', function (req, res) {
     res.render('mapfs', { warps: JSON.stringify(tsdb.warps) });
 });
 
-app.get('/login', function (req, res) {
+app.get('/Terraria/login', function (req, res) {
     utils.ensureCookieExists(req, res);
      
     res.render('login');
 });
 
-app.get('/admin', function (req, res) {   
+app.get('/Terraria/admin', function (req, res) {   
     var user = tsdb.users[req.cookies.uid];
     
     if (!user) {
