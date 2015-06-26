@@ -1,0 +1,60 @@
+﻿.msgbox {	
+	float:right;
+	border-radius:10px;
+	background-color:rgba(50,70,150,0.5);
+	height:400px;
+	width:300px;
+}
+
+.msgbox .header {
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	height:10%;
+	text-align:center;
+	background-color:rgba(50,70,120,1);
+}
+
+.header #title {
+	font-family:Verdena;
+	font-size:25px;
+	padding-top:7px;
+	color:gray;
+}
+
+.msgbox #messages {
+	height:80%;
+	overflow-y: auto;
+}
+
+.msgbox #messages .msg {
+    overflow:hidden;
+	word-wrap: break-word;
+	font-size:12px;
+	font-family:verdana;
+	border-radius:3px;
+	margin:5px;
+	padding:5px;
+	background-color:rgba(50,70,100,0.5);
+}
+
+.msg #user{
+	color:rgb(50,50,120);
+	display:inline;
+	font-weight:bold;
+}
+
+.msg #body {
+	color:gray;
+	display:inline;
+}
+
+.msgbox .input {
+	margin:10px;
+}
+
+.input #msgbox {
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}

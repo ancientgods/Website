@@ -1,0 +1,108 @@
+﻿
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+* {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+*:before, *:after {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+body {
+  color: #808080; /*Icon text color*/
+  margin: 0;
+}
+
+
+input {
+  border: none;
+  font-size: 14px;
+  line-height: 1.5em;
+  padding: 0;
+  -webkit-appearance: none;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  content: ' ';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.container {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+
+/* ---------- LOGIN ---------- */
+#login {
+  width: 280px;
+}
+
+#login form span {
+  background-color:rgba(27, 72, 111, 0.70); /*border left of input*/
+  border-radius: 3px 0px 0px 3px;
+  display: block;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+}
+
+#login form input {
+  height: 50px;
+}
+
+#login form input[type="text"], input[type="password"] {
+  background-color: rgba(43, 76, 104,0.5); /*input background*/
+  border-radius: 0px 3px 3px 0px;
+  color: #808080;/*input text color*/
+  margin-bottom: 1em;
+  padding: 0 16px;
+  width: 230px;
+}
+
+#login form input[type="submit"] {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: rgba(43, 76, 104,0.5); /*submit background*/
+  color: #808080; /*submit text*/
+  font-weight: bold;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+  width: 280px;
+}
+
+#login form input[type="submit"]:hover {
+  background-color: rgba(43, 76, 104,0.7); /*Submit hover color*/
+}
+
+#login > p {
+  text-align: center;
+}
+
+#login > p span {
+  padding-left: 5px;
+}

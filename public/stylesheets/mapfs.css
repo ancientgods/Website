@@ -1,0 +1,196 @@
+﻿* {
+    outline: none;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 11px;
+    font-family: sans-serif;
+    color: #FFF;
+}
+
+#sidebar {
+    transition: margin-right 0.6s ease-in-out 0s;
+    background: none repeat scroll 0 0 rgba(0,0,0,0.6);
+    border-left: 1px solid rgba(0,0,0,0.5);
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 120;
+    margin-right: -203px;
+    width: 200px;
+}
+    #sidebar:hover, #sidebar.pinned {
+        margin-right: 0px;
+    }
+
+    #sidebar .expand {
+        transition: right 0.6s ease-in-out 0s;
+        background: none repeat scroll 0 0 rgba(0,0,0,0.6);
+        border: 1px solid rgba(0,0,0,0.5);
+        display: block;
+        height: 100%;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 16px;
+        z-index: 110;
+        right: 200px;
+        font-size: 25px;
+    }
+    #sidebar:hover .expand, #sidebar.pinned .expand {
+        right: -120px;
+    }
+    #sidebar .hidden {
+        display: none !important;
+    }
+    #sidebar .pin {
+        cursor: pointer;
+        height: 25px;
+        line-height: 25px;
+        width: 190px;
+        padding-right: 10px;
+        background-color: rgba(32,32,32,0.6);
+        border-bottom: 1px solid rgba(64,64,64,0.6);
+        text-align: right;
+    }
+    #sidebar .pin:hover {
+        background-color: rgba(64,64,64,0.6);
+        border-bottom: 1px solid rgba(128,128,128,0.6);
+    }
+    #sidebar .pin:active {
+        background-color: rgba(128,128,128,0.6);
+        border-bottom: 1px solid rgba(255,255,255,0.6);
+    }
+    #sidebar .link {
+        cursor: pointer;
+        height: 25px;
+        line-height: 25px;
+        width: 100%;
+        padding-left: 10px;
+        background-color: rgba(32,32,32,0.6);
+        border-bottom: 1px solid rgba(64,64,64,0.6);
+    }
+    #sidebar .link:hover {
+        background-color: rgba(64,64,64,0.6);
+        border-bottom: 1px solid rgba(128,128,128,0.6);
+    }
+    #sidebar .link:active {
+        background-color: rgba(128,128,128,0.6);
+        border-bottom: 1px solid rgba(255,255,255,0.6);
+    }
+    #sidebar .expand_goto {
+        cursor: pointer;
+        height: 25px;
+        line-height: 25px;
+        width: 100%;
+        padding-left: 10px;
+        background-color: rgba(32,32,32,0.6);
+        border-bottom: 1px solid rgba(64,64,64,0.6);
+    }
+    #sidebar .expand_goto:hover {
+        background-color: rgba(64,64,64,0.6);
+        border-bottom: 1px solid rgba(128,128,128,0.6);
+    }
+    #sidebar .expand_goto:active {
+        background-color: rgba(128,128,128,0.6);
+        border-bottom: 1px solid rgba(255,255,255,0.6);
+    }
+    #sidebar:not(:hover):not(.pinned) .goto {
+        display: none;
+    }
+    #sidebar:hover .goto, #sidebar.pinned .goto {
+        position: absolute;
+        display: block;
+        right: 201px;
+        width: 116px;
+        padding: 4px;
+        background-color: rgba(0,0,0,0.6);
+        margin-top: -29px;
+        border: 1px solid rgba(64,64,64,0.6);
+    }
+    #sidebar .goto input[type="text"] {
+        width: 35px;
+    }
+    #sidebar .goto input {
+        font-size: 11px;
+        text-align: center;
+    }
+    #sidebar strong {
+        font-size: 16px;
+    }
+    #sidebar fieldset {
+        border-top: 1px solid rgba(196,196,196,0.4);
+        border-right: 0 none;
+        border-bottom: 0 none;
+        border-left: 0 none;
+    }
+    #sidebar legend {
+        font-weight: bold;
+        padding: 8px 4px;
+    }
+    #sidebar .wcheck {
+        position: absolute;
+        margin-top: -25px;
+        margin-left: 50px;
+    }
+    #sidebar .wsearch {
+        position: absolute;
+        font-size: 10px;
+        height: 18px;
+        margin-left: 75px;
+        margin-top: -28px;
+    }
+    #sidebar .warps {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        height: 100%;
+        width: 190px;
+    }
+    #sidebar .warps:hover {
+        overflow-y: auto;
+    }
+    #sidebar .warps .warp a {
+        background: none repeat scroll 0 0 rgba(64,64,64,0.6);
+        border: 1px solid rgba(64,64,64,0.6);
+        border-radius: 3px;
+        display: inline-block;
+        float: left;
+        padding: 4px;
+        margin-top: 2px;
+        width: 170px;
+        color: #FFF !important;
+        text-decoration: none;
+    }
+    #sidebar .warps .warp a:hover {
+        background: none repeat scroll 0 0 rgba(155,155,155,0.6);
+    }
+#map_canvas {
+    height: 100%;
+    width: 100%;
+}
+#mapXY {
+    line-height: 19px;
+    width: 125px;
+    margin-left: -200px;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    font-size: 14px;
+    background: rgba(0,0,0,0.5);
+    background: -moz-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 10%,rgba(0,0,0,0.5) 90%,rgba(0,0,0,0) 100%);
+    background: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(0,0,0,0)),color-stop(10%,rgba(0,0,0,0.5)),color-stop(90%,rgba(0,0,0,0.5)),color-stop(100%,rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 10%,rgba(0,0,0,0.5) 90%,rgba(0,0,0,0) 100%);
+    background: -o-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 10%,rgba(0,0,0,0.5) 90%,rgba(0,0,0,0) 100%);
+    background: -ms-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 10%,rgba(0,0,0,0.5) 90%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 10%,rgba(0,0,0,0.5) 90%,rgba(0,0,0,0) 100%);
+}

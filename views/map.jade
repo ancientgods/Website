@@ -1,0 +1,22 @@
+﻿doctype html
+html
+  head
+    extends templates/layout
+    block title
+        link(rel='stylesheet', href='./stylesheets/map.css')
+        title Cubiversum - Terraria world map
+
+  body
+    block append header
+    block prepend footer
+        .content
+            .title World Map
+            .msg
+                #msgheader
+                    p(class='msgtitle') Cubiversum server world map (updated every 30 minutes)
+                    p(class='msgdate') 2015-06-09
+                #body
+                    a(href='/Terraria/map/fullscreen') Click here for fullscreen
+                    br
+                    br
+                    iframe(src='/Terraria/map/fullscreen' height='500px' width='100%' frameborder='0' scrolling='no')

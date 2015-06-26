@@ -1,0 +1,136 @@
+@font-face {
+    font-family: Banana_Split;
+    src: url('../fonts/banana_split.ttf');
+}
+
+* {
+    margin:0;
+}
+
+html {
+    height:100%;
+}
+
+body {
+    background: url('../images/space_bg.jpg') bottom left no-repeat fixed;
+    height:100%;
+    font-family:Banana_Split;
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contentwrapper {
+    min-height:100%;
+    margin-bottom:-40px;
+}
+
+.contentwrapper:after {
+    margin-top:30px;
+    content:"";
+    display:block;
+    height:40px;
+}
+
+.content {
+    width:80%;
+    min-height:76%;
+    margin-top:30px;
+    padding-bottom:30px;
+    margin-bottom:auto;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#0f325c;
+    border-radius:10px;
+    background-color:rgba(87,137,181,0.6);
+}
+.content .title {
+    width: 100%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color:rgba(28, 32, 51, 0.50);
+    margin-bottom: 30px;
+    font-family: Arial;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+
+}
+
+.footer {
+    height:40px;
+    background-color:rgba(43, 76, 104,0.5);
+    width:80%;
+    text-align:center;
+    font-family:Arial;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border:0px;
+}
+
+.footer h2{
+    font-size:20px;
+    color:#ffffff;
+}
+
+.footer #text {
+    padding-top:10px;
+    display: inline-block;
+    vertical-align:middle;
+}
+
+h1 {
+    font-size:50px;
+    color:#505050;
+}
+
+h4 {
+    font-size:12px;
+}
+
+.msg {
+    margin-top:30px;
+    margin-left:auto;
+    margin-right:auto;   
+    color:white;
+    font-family:Arial;
+    background-color:rgba(43, 76, 104,0.7);
+    margin-left:30px;
+    margin-right:30px;
+    border-radius:15px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+
+#msgheader {
+    font-size:20px;
+    text-align:left;
+    height:30px;
+    padding:5px 10px 5px 10px;
+    background-color:rgba(0,0,0,0.1);
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    padding-top:12px;
+    vertical-align:middle;
+}
+
+#msgheader .msgtitle {
+    float:left;
+}
+
+#msgheader .msgdate {
+    float:right;
+}
+
+.msg #body {
+    padding: 15px;
+    font-size:15px;
+}

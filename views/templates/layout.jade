@@ -1,0 +1,39 @@
+html
+    head
+    block include
+        link(rel='stylesheet', href='./stylesheets/layout.css')
+        link(rel='stylesheet', href='./stylesheets/cssmenu.css')
+    block title
+        meta(name="description", content="Cubiversum is a server for Terraria and Planets3. We have friendly staff, skilled builders, and tons of incredible creations. The only thing missing is you!")
+        meta(property="og:site_name", content="Cubiversum")
+        meta(property="og:image", content="http://cubiversum.com/general/images/logo.png")
+        meta(property="og:type", content="website")
+        meta(property="og:url" content="http://cubiversum.com")
+        meta(property="og:title", content="Cubiversum")
+        title Cubiversum
+    body
+        .contentwrapper
+            block header
+                .header
+                    img#logo(src="../general/images/logo.png", alt="Cubiversum Logo")
+                    #cssmenu
+                        ul
+                            li(class=url == '/Terraria/' ? 'active' : undefined): a(href='/Terraria/') Home
+                            li(class=url == '/Terraria/players' ? 'active' : undefined): a(href='#') Status
+                            if (admin)
+                                li(class=url == '/Terraria/admin' ? 'active' : undefined): a(href='/Terraria/admin') Admin
+                            li: a(href='#') Forums
+                            li(class=url == '/Terraria/map' ? 'active' : undefined): a(href='/Terraria/map') Map                           
+                            if username
+                                li(class=url == '/Terraria/store' ? 'active' : undefined, id='store'): a(href='/Terraria/store') Store
+                            li.last: a(href='http://terraria-servers.com/server/1065/vote/') Vote
+                            li: a(href='steam://rungameid/105600// -j Cubiversum.com -p 7777') Connect
+                            unless username
+                                li.last#login: a(href='/Terraria/login') Login
+                            if username
+                                li.username Logged in as #{username}
+            block footer
+        .footer
+            #text
+                h2 &copy; Cubiversum - 2015
+

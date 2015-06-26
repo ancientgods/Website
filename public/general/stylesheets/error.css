@@ -1,0 +1,33 @@
+﻿@font-face {
+    font-family: Banana_Split;
+    src: url('../fonts/banana_split.ttf');
+}
+* {
+    margin:0;
+}
+
+html,body {
+    background: url(../images/error.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;        /* Generic*/
+    text-align:center;
+}
+
+h1 {
+	font-size:100px;
+    font-family: Banana_Split;
+    color:#b22c19;
+}
+
+h2 {
+    font-size:70px;
+    font-family: Banana_Split;
+    color:#b22c19;
+}
+
+
+
+
+

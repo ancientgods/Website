@@ -1,0 +1,36 @@
+﻿doctype html
+html
+  head
+    script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?sensor=false')
+    script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+    script(type='text/javascript', src='http://code.jquery.com/jquery-latest.min.js')
+    script(type='text/javascript', src='../javascripts/map.js')
+    link(rel='stylesheet', href='../stylesheets/mapfs.css')
+    script.
+        var warps = JSON.parse('!{warps}')
+        var autosavepngLocation = '../images/world-now.png'
+        var mapWidth = 8400
+        var mapHeight = 2400           
+    title Cubiversum - Terraria world map
+  body
+    #map_canvas
+    #sidebar
+        .pin Pin sidebar
+            strong &#8250 
+        div.link Link to current position
+        div.expand_goto: strong &#8249 
+        form.goto.hidden
+            input.x(type='text', placeholder='X', value='')
+            input.y(type='text', placeholder='Y', value='')
+            input(onclick='GotoBttn()', type='button', value='GO')
+        fieldset
+            legend Warps
+            input.wcheck(type='checkbox', checked)
+            input.wsearch(type='text', placeholder='Search', onkeyup='WarpSearch()')
+            ul.warps
+        fieldset
+            legend Regions
+            input.rcheck(type='checkbox', checked)
+            input.rsearch(type='text', placeholder='Search', onkeyup='RegionSearch()')
+            ul.regions
+        div.expand &#8249
