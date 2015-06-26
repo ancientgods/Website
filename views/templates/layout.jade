@@ -1,8 +1,8 @@
 html
     head
     block include
-        link(rel='stylesheet', href='./stylesheets/layout.css')
-        link(rel='stylesheet', href='./stylesheets/cssmenu.css')
+        link(rel='stylesheet', href='stylesheets/layout.css')
+        link(rel='stylesheet', href='stylesheets/cssmenu.css')
     block title
         meta(name="description", content="Cubiversum is a server for Terraria and Planets3. We have friendly staff, skilled builders, and tons of incredible creations. The only thing missing is you!")
         meta(property="og:site_name", content="Cubiversum")
@@ -15,7 +15,7 @@ html
         .contentwrapper
             block header
                 .header
-                    img#logo(src="../general/images/logo.png", alt="Cubiversum Logo")
+                    img#logo(src="../Terraria/images/logo.png", alt="Cubiversum Logo")
                     #cssmenu
                         ul
                             li(class=url == '/Terraria/' ? 'active' : undefined): a(href='/Terraria/') Home

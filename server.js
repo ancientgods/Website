@@ -64,11 +64,16 @@ setInterval(function() {
 }, 1000) //Resets Date each second. Sets timestamp to new time. Used for synchronisation.
 
 // App-gets :P
+app.get('/', function (req, res) {
+    res.redirect('/Terraria/');
+});
+
+
 app.get('/Terraria/', function (req , res) {
     utils.ensureCookieExists(req, res);
     var user = tsdb.users[req.cookies.uid];
     
-    var info = { url: '/Terraria/' };
+    var info = { url: '/' };
     if (user) {
         info.admin = utils.isAdmin(user);
         info.username = user.Username;
@@ -82,7 +87,7 @@ app.get('/Terraria/store', function (req, res) {
     var user = tsdb.users[req.cookies.uid];
     
     if (!user) {
-        res.redirect('/login');
+        res.redirect('login');
     } else {
         var info = { url: '/store' };
         if (user) {
@@ -97,7 +102,7 @@ app.get('/Terraria/map', function (req, res) {
     utils.ensureCookieExists(req, res);
     var user = tsdb.users[req.cookies.uid];
     
-    var info = { url: '/Terraria/map' };
+    var info = { url: '/map' };
     if (user) {
         info.admin = utils.isAdmin(user);
         info.username = user.Username;
@@ -128,7 +133,7 @@ app.get('/Terraria/admin', function (req, res) {
             info.admin = utils.isAdmin(user);
             info.username = user.Username;
         }
-        res.render('/admin', info);
+        res.render('admin', info);
     } else {
         res.redirect('/Terraria')
     }
